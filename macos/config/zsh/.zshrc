@@ -72,8 +72,9 @@ ZSH_THEME="robbyrussell"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   zsh-history-enquirer
+  git
+)
 
-git)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -81,21 +82,11 @@ source $ZSH/oh-my-zsh.sh
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
-# Shell Startup commands
-macchina
+# export starship.rs config path
+export STARSHIP_CONFIG=~/.config/starship/starship.toml
+
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
-
-# zfz frappe theme
-export FZF_DEFAULT_OPTS=" \
---color=bg+:#414559,bg:#303446,spinner:#f2d5cf,hl:#e78284 \
---color=fg:#c6d0f5,header:#e78284,info:#ca9ee6,pointer:#f2d5cf \
---color=marker:#babbf1,fg+:#c6d0f5,prompt:#ca9ee6,hl+:#e78284 \
---color=selected-bg:#51576d \
---multi"
-
-# Autojump start
-[ -f /opt/homebrew/etc/profile.d/autojump.sh ] && . /opt/homebrew/etc/profile.d/autojump.sh
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -103,10 +94,6 @@ export FZF_DEFAULT_OPTS=" \
 # else
 #   export EDITOR='nvim'
 # fi
-
-#Aliases
-alias ls=lsd
-alias cat=bat
 
 # Compilation flags
 # export ARCHFLAGS="-arch $(uname -m)"
@@ -122,21 +109,36 @@ alias cat=bat
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-eval "$(starship init zsh)"
+alias cat='bat'
+alias ls='lsd'
 
-#nvm install
+# Put brew packages into path
+# export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
+
+# fzf catppuccin theme
+export FZF_DEFAULT_OPTS=" \
+--color=bg+:#414559,bg:#303446,spinner:#f2d5cf,hl:#e78284 \
+--color=fg:#c6d0f5,header:#e78284,info:#ca9ee6,pointer:#f2d5cf \
+--color=marker:#babbf1,fg+:#c6d0f5,prompt:#ca9ee6,hl+:#e78284 \
+--color=selected-bg:#51576d \
+--color=border:#414559,label:#c6d0f5"
+
+# nvm Setup
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
-# Source BGnotify
-source $HOME/.config/zsh/zsh-background-notify/bgnotify.plugin.zsh
+# Startup
+macchina
 
-# Source zsh autosuggestion
-source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+# zsh autosuggestion installation
+source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-# Source zsh-syntax-highlighting
-source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# zsh fast syntax highlighting installation
+source /opt/homebrew/opt/zsh-fast-syntax-highlighting/share/zsh-fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 
-# Source zsh-syntax-highlighting-catppuccin
-source ~/.config/zsh/zsh-syntax-highlighting/themes/catppuccin_frappe-zsh-syntax-highlighting.zsh
+#zsh autojump installation
+[ -f /opt/homebrew/etc/profile.d/autojump.sh ] && . /opt/homebrew/etc/profile.d/autojump.sh
+
+# Setup of starship
+eval "$(starship init zsh)"
