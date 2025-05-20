@@ -1,6 +1,9 @@
 #!/bin/sh
 
-#l Install and source ohmyzsh
+# Cache sudo
+sudo -v
+
+# Install and source ohmyzsh
 sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
 cp ./zsh/.zshrc ~/
 source ~/.zshrc
@@ -15,3 +18,28 @@ source ~/.zshrc
 
 # Copy my configs
 cp -r ./* ~/.config
+
+# Apply bat themes
+bat --list-themes
+
+# Agree to rosetta
+softwareupdate --install-rosetta --agree-to-license
+
+# Intall node via nvm
+nvm install node
+
+# Install zsh history inquirer
+npm i -g zsh-history-enquirer
+
+# Apply fast synthax highlight theme
+fast-theme XDG:catppuccin-frappe
+
+# Start brew services to autostart borders
+brew services start borders
+
+# Change dock size to 42
+defaults write com.apple.dock "tilesize" -int "42" && killall Dock
+
+# Source and print finished
+source ~/.zshrc
+echo "Finished Installation"
