@@ -112,8 +112,14 @@ export STARSHIP_CONFIG=~/.config/starship/starship.toml
 alias cat='bat'
 alias ls='lsd'
 
+# rustup
+export PATH="/opt/homebrew/opt/rustup/bin:$PATH"
+
 # Put brew packages into path
-# export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
+export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
+
+# Cargo packages into path
+export PATH="/Users/an7onie77i/.cargo/bin:$PATH"
 
 # fzf catppuccin theme
 export FZF_DEFAULT_OPTS=" \
@@ -142,3 +148,8 @@ source /opt/homebrew/opt/zsh-fast-syntax-highlighting/share/zsh-fast-syntax-high
 
 # Setup of starship
 eval "$(starship init zsh)"
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/an7onie77i/.lmstudio/bin"
+# End of LM Studio CLI section
+

@@ -16,6 +16,9 @@ source ~/.zshrc
 brew bundle install --file=./Brewfile
 source ~/.zshrc
 
+# Install rust
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
 # Copy my configs
 cp -r ./* ~/.config
 
