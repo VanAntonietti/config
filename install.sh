@@ -16,8 +16,29 @@ source ~/.zshrc
 brew bundle install --file=./Brewfile
 source ~/.zshrc
 
+################### DISCLAIMER ###################
+# I don't like to install this packages outside  #
+# Homebrew, see in the future a another way to   #
+# make lsp of ocaml and wasm compilation in rust #
+# working using Homebrew.                        #
+##################################################
+
 # Install rust
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+source ~/.zshrc
+
+# Install ocaml
+bash -c "sh <(curl -fsSL https://opam.ocaml.org/install.sh)"
+source ~/.zshrc
+opam init
+opam install ocaml-lsp-server odoc ocamlformat utop
+source ~/.zshrc
+
+# Install Xcode
+mas install 497799835
+
+# Install xcode command line tools
+xcode-select --install
 
 # Copy my configs
 cp -r ./* ~/.config
