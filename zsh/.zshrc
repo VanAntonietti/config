@@ -111,6 +111,7 @@ export STARSHIP_CONFIG=~/.config/starship/starship.toml
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias cat='bat'
 alias ls='lsd'
+alias toggle-wm='~/.config/scripts/switch_window_manager.sh'
 
 # rustup
 export PATH="/opt/homebrew/opt/rustup/bin:$PATH"
