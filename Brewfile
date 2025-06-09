@@ -85,7 +85,9 @@ cask "utm"
 cask "vagrant"
 cask "virtualbox"
 cask "visual-studio-code"
+cask "vlc"
 cask "whatsapp"
+cask "zed"
 cask "zen"
 mas "Keynote", id: 409183694
 mas "Numbers", id: 409203825
