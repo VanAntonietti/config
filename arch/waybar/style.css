@@ -1,0 +1,79 @@
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "Fira Code NerdFont";
+    font-size: 12px; 
+    min-height: 10px;
+    color: #babbf1;
+  }
+
+window#waybar {
+  background: transparent;
+}
+
+window#waybar.hidden {
+  opacity: 0.2;
+}
+
+#window {
+  margin-top: 6px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius:10px;
+  transition: none;
+  color: transparent;
+  background: transparent;
+}
+
+#custom-arch {
+  font-size: 4px;
+  color: #babbf1;
+  margin-top: 6px;
+  padding: 0 10px;
+  margin-right: 5px;
+  margin-left: 20px;
+  background-color: #303445;
+  border: 1px solid #babbf1;
+  border-radius: 1px;
+}
+
+#custom-arch:hover {
+  background-color: rgba(186, 187, 241, 0.2);
+}
+
+#workspaces {
+  margin-top: 6px;
+  margin-left: 12px;
+  font-size: 10px;
+  margin-bottom: 0px;
+  border-radius: 0px;
+  transition: none;
+  /* border: 1px solid #babbf1; */
+}
+
+#workspaces button {
+  margin: 0 2px;
+  border: 1px solid #babbf1;
+  padding: 0 10px;
+  background-color: #303445;
+}
+
+#workspaces button:first-child {
+  margin-left: 0;
+}
+
+#workspaces button:last-child {
+  margin-right: 0;
+}
+
+#clock {
+  font-size: 10px;
+  color: #babbf1;
+  margin-top: 6px;
+  padding: 0 10px;
+  margin-right: 20px;
+  margin-left: 5px;
+  background-color: #303445;
+  border: 1px solid #babbf1;
+  border-radius: 1px;
+}

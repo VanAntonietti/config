@@ -1,0 +1,23 @@
+{
+    "layer": "top",
+    "modules-left": ["custom/arch", "hyprland/workspaces"],
+    "modules-right": ["clock"],
+
+    "custom/arch": {
+        "format": " ",
+        "tooltip": false,
+        "on-click": "wofi --show drun"
+      },
+
+    "hyprland/workspaces": {
+      "format": "{name}",
+      "on-scroll-up": "hyprctl dispatch workspace e+1",
+      "on-scroll-down": "hyprctl dispatch workspaces e-1"
+      },
+
+    "clock": {
+        "format": "{:%H:%M}",
+        "format-alt": "{:%A, %B, %d, %Y}",
+        "interval": 60
+      }
+}
