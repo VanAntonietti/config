@@ -15,6 +15,10 @@
       "on-scroll-down": "hyprctl dispatch workspaces e-1"
       },
 
+    "tray": {
+        "icon-size": 12,
+        "spacing": 10
+      },
     "wireplumber": {
         "format": "{volume}% {icon}",
         "format-muted": " {volume}%",
