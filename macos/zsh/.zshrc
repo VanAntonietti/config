@@ -111,16 +111,9 @@ export STARSHIP_CONFIG=~/.config/starship/starship.toml
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias cat='bat'
 alias ls='lsd'
-alias toggle-wm='~/.config/scripts/switch_window_manager.sh'
-
-# rustup
-export PATH="/opt/homebrew/opt/rustup/bin:$PATH"
 
 # Put brew packages into path
-export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
-
-# Cargo packages into path
-export PATH="/Users/an7onie77i/.cargo/bin:$PATH"
+# export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
 
 # fzf catppuccin theme
 export FZF_DEFAULT_OPTS=" \
@@ -149,17 +142,3 @@ source /opt/homebrew/opt/zsh-fast-syntax-highlighting/share/zsh-fast-syntax-high
 
 # Setup of starship
 eval "$(starship init zsh)"
-
-# Added by LM Studio CLI (lms)
-export PATH="$PATH:/Users/an7onie77i/.lmstudio/bin"
-# End of LM Studio CLI section
-
-
-
-# BEGIN opam configuration
-# This is useful if you're using opam as it adds:
-#   - the correct directories to the PATH
-#   - auto-completion for the opam binary
-# This section can be safely removed at any time if needed.
-[[ ! -r '/Users/an7onie77i/.opam/opam-init/init.zsh' ]] || source '/Users/an7onie77i/.opam/opam-init/init.zsh' > /dev/null 2> /dev/null
-# END opam configuration
