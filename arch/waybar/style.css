@@ -1,11 +1,39 @@
+@define-color rosewater #f2d5cf;
+@define-color flamingo  #eebebe;
+@define-color pink      #f4b8e4;
+@define-color mauve     #ca9ee6;
+@define-color red       #e78284;
+@define-color maroon    #ea999c;
+@define-color peach     #ef9f76;
+@define-color yellow    #e5c890;
+@define-color green     #a6d189;
+@define-color teal      #81c8be;
+@define-color sky       #99d1db;
+@define-color sapphire  #85c1dc;
+@define-color blue      #8caaee;
+@define-color lavender  #babbf1;
+@define-color text      #c6d0f5;
+@define-color subtext1  #b5bfe2;
+@define-color subtext0  #a5adce;
+@define-color overlay2  #949cbb;
+@define-color overlay1  #838ba7;
+@define-color overlay0  #737994;
+@define-color surface2  #626880;
+@define-color surface1  #51576d;
+@define-color surface0  #414559;
+@define-color base      #303446;
+@define-color mantle    #292c3c;
+@define-color crust     #232634;
+
+
 * {
     border: none;
     border-radius: 0;
-    font-family: "Fira Code NerdFont";
+    font-family: "Fira Code NerdFont", "Sybols Nerd Font";
     font-size: 12px; 
     min-height: 10px;
     color: #babbf1;
-  }
+}
 
 window#waybar {
   background: transparent;
@@ -16,35 +44,40 @@ window#waybar.hidden {
 }
 
 #window {
-  margin-top: 6px;
-  padding-left: 10px;
-  padding-right: 10px;
-  border-radius:10px;
   transition: none;
   color: transparent;
   background: transparent;
 }
 
-#custom-arch {
-  font-size: 4px;
-  color: #babbf1;
-  margin-top: 6px;
+#custom-arch,
+#tray,
+#wireplumber,
+#clock {
+  color: @lavender;
+  margin-top: 5px;
   padding: 0 10px;
   margin-right: 5px;
-  margin-left: 20px;
-  background-color: #303445;
-  border: 1px solid #babbf1;
+  margin-left: 5px;
+  background-color: @base;
+  border: 1px solid @lavender;
   border-radius: 1px;
 }
 
+#custom-arch {
+  font-family: "Symbols Nerd Font";
+  font-size: 12px;
+  margin-left: 20px;
+}
+
 #custom-arch:hover {
-  background-color: rgba(186, 187, 241, 0.2);
+  background-color: @lavender;
+  color: @base;
 }
 
 #workspaces {
-  margin-top: 6px;
-  margin-left: 12px;
-  font-size: 10px;
+  margin-top: 5px;
+  margin-left: 5px;
+  font-size: 12px;
   margin-bottom: 0px;
   border-radius: 0px;
   transition: none;
@@ -66,14 +99,17 @@ window#waybar.hidden {
   margin-right: 0;
 }
 
+#workspaces:hover {
+  background-color: @lavender;
+  color: @base;
+}
+
+#tray {
+
+}
+
+#wireplumber {}
+
 #clock {
-  font-size: 10px;
-  color: #babbf1;
-  margin-top: 6px;
-  padding: 0 10px;
   margin-right: 20px;
-  margin-left: 5px;
-  background-color: #303445;
-  border: 1px solid #babbf1;
-  border-radius: 1px;
 }
