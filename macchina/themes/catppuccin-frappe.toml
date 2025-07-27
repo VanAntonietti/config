@@ -1,0 +1,52 @@
+# catppuccin for macchina
+spacing = 2
+padding = 0
+hide_ascii = false
+separator = "->"
+key_color = "#babbf1"       #Lavender
+separator_color = "#ca9ee6" #Mauve
+
+[palette]
+type = "Dark"
+visible = true
+glyph = "  "
+
+[bar]
+hide_delimeters = false
+visible = false
+
+[box]
+visible = false
+
+#[custom_ascii]
+#path = file_path
+
+[box.inner_margin]
+x = 2
+y = 1
+
+[randomize]
+key_color = false
+separator_color = false
+
+[keys]
+host = "  host"
+kernel = "󰌽  kernel"
+battery = "󰁹  battery"
+os = "  os"
+de = "  de"
+wm = "  wm"
+distro = "  distro"
+terminal = "  terminal"
+shell = "  shell"
+packages = "  packages"
+uptime = "󰥔  uptime"
+memory = "  memory"
+machine = "󰇅  machine"
+local_ip = "󰱓  ip"
+backlight = "󰃞  brightness"
+resolution = "󰍺  resolution"
+cpu_load = "󰊚  cpu load"
+cpu = "  cpu"
+gpu = "󰈐  gpu"
+disk_space = "  disk space"
